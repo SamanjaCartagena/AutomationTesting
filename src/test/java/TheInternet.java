@@ -47,6 +47,22 @@ public class TheInternet {
 	 //Assert
 	 Assert.assertEquals(selectedOption, expectedSelection);
   }
+  
+  @Test
+	public void canInputNumbers() {
+	  System.setProperty("webdriver.chrome.driver", "C:\\Users\\c.samanja09\\Downloads\\chromedriver_win32\\chromedriver.exe");
+		 WebDriver driver = new ChromeDriver();
+		 String baseUrl ="http://the-internet.herokuapp.com/";
+		int expectedNumber = 2;
+
+		int actualNumber = new InputPage(driver, baseUrl)
+				.navigate()
+				.setInputValue(expectedNumber)
+				.getInputValue();
+
+		Assert.assertEquals(actualNumber, expectedNumber);
+	}
+
   @BeforeTest
   public void beforeTest() {
 	  
