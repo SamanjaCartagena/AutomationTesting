@@ -88,7 +88,8 @@ public class TheInternet {
 	 
 	 //Act
       BasicAuth a = new BasicAuth(driver,url);
-          a.navigate();
+          a.navigate()
+          .enterData("admin", "admin");
           
     	
 	 //Assert
@@ -121,6 +122,21 @@ public class TheInternet {
 			 
      ar.navigate()
      .btnClick();
+    	
+	 //Assert
+  }
+  @Test
+  public void challening() throws InterruptedException {
+	  //Arrange
+	 System.setProperty("webdriver.chrome.driver", "C:\\Users\\c.samanja09\\Downloads\\chromedriver_win32\\chromedriver.exe");
+	 WebDriver driver = new ChromeDriver();
+	 String url ="http://the-internet.herokuapp.com";
+	 
+	 //Act
+	 ChallengingDom c= new ChallengingDom(driver,url);
+			 
+     c.navigate()
+    .challenge();
     	
 	 //Assert
   }
