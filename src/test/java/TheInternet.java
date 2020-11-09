@@ -2,6 +2,7 @@ import org.testng.annotations.Test;
 import org.testng.annotations.BeforeTest;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.support.PageFactory;
 import org.testng.Assert;
 import org.testng.annotations.AfterTest;
 
@@ -62,7 +63,51 @@ public class TheInternet {
 
 		Assert.assertEquals(actualNumber, expectedNumber);
 	}
-
+  
+  @Test
+  public void formAuthenticate() {
+	  //Arrange
+	 System.setProperty("webdriver.chrome.driver", "C:\\Users\\c.samanja09\\Downloads\\chromedriver_win32\\chromedriver.exe");
+	 WebDriver driver = new ChromeDriver();
+	 String url ="http://the-internet.herokuapp.com/";
+	 
+	 		
+	 //Act
+      FormAuthentication form= new FormAuthentication(driver,url);    	
+    	form.navigate()
+    	.login("samanja", "1234");
+    	
+	 //Assert
+  }
+  @Test
+  public void basicAuth() {
+	  //Arrange
+	 System.setProperty("webdriver.chrome.driver", "C:\\Users\\c.samanja09\\Downloads\\chromedriver_win32\\chromedriver.exe");
+	 WebDriver driver = new ChromeDriver();
+	 String url ="http://the-internet.herokuapp.com";
+	 
+	 //Act
+      BasicAuth a = new BasicAuth(driver,url);
+          a.navigate();
+          
+    	
+	 //Assert
+  }
+  @Test
+  public void forgotPass() {
+	  //Arrange
+	 System.setProperty("webdriver.chrome.driver", "C:\\Users\\c.samanja09\\Downloads\\chromedriver_win32\\chromedriver.exe");
+	 WebDriver driver = new ChromeDriver();
+	 String url ="http://the-internet.herokuapp.com";
+	 
+	 //Act
+     ForgotPassword f= new ForgotPassword(driver,url);
+     f.navigate()
+     .enterEmail("c.samanja09@gmail.com");
+          
+    	
+	 //Assert
+  }
   @BeforeTest
   public void beforeTest() {
 	  
