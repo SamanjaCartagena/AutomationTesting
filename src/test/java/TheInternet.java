@@ -140,6 +140,79 @@ public class TheInternet {
     	
 	 //Assert
   }
+  @Test
+  public void context() throws InterruptedException {
+	  //Arrange
+	 System.setProperty("webdriver.chrome.driver", "C:\\Users\\c.samanja09\\Downloads\\chromedriver_win32\\chromedriver.exe");
+	 WebDriver driver = new ChromeDriver();
+	 String url ="http://the-internet.herokuapp.com";
+	 
+	 //Act
+	 ContextMenu c= new ContextMenu(driver,url);
+			 
+     c.navigate()
+     .popUp();
+    	
+	 //Assert
+  }
+  @Test
+  public void disappear() throws InterruptedException {
+	  //Arrange
+	 System.setProperty("webdriver.chrome.driver", "C:\\Users\\c.samanja09\\Downloads\\chromedriver_win32\\chromedriver.exe");
+	 WebDriver driver = new ChromeDriver();
+	 String url ="http://the-internet.herokuapp.com";
+	 
+	 //Act
+	 DisappearingElements d= new DisappearingElements(driver,url);
+			 
+     d.navigate()
+     .btnClick();
+    	
+	 //Assert
+  }
+  @Test
+  public void drag() throws InterruptedException {
+	  //Arrange
+	 System.setProperty("webdriver.chrome.driver", "C:\\Users\\c.samanja09\\Downloads\\chromedriver_win32\\chromedriver.exe");
+	 WebDriver driver = new ChromeDriver();
+	 String url ="http://the-internet.herokuapp.com";
+	 
+	 //Act
+	 DragDrop d= new DragDrop(driver,url);
+			 
+     d.navigate()
+     .dragdrop();
+    	
+	 //Assert
+  }
+  @Test
+  public void onClick() throws InterruptedException {
+	  //Arrange
+	 System.setProperty("webdriver.chrome.driver", "C:\\Users\\c.samanja09\\Downloads\\chromedriver_win32\\chromedriver.exe");
+	 WebDriver driver = new ChromeDriver();
+	 String url ="http://the-internet.herokuapp.com";
+	 
+	 //Act
+	 DynamicControll d= new DynamicControll(driver,url);
+			 
+     d.navigate()
+     .btnClick();
+	 //Assert
+  }
+  @Test
+  public void dynamic() throws InterruptedException {
+	  //Arrange
+	 System.setProperty("webdriver.chrome.driver", "C:\\Users\\c.samanja09\\Downloads\\chromedriver_win32\\chromedriver.exe");
+	 WebDriver driver = new ChromeDriver();
+	 String url ="http://the-internet.herokuapp.com";
+	 
+	 //Act
+	 Dynamic_loading d= new Dynamic_loading(driver,url);
+			 
+     d.navigate()
+     .btnClick();
+	 //Assert
+  }
   @BeforeTest
   public void beforeTest() {
 	  
