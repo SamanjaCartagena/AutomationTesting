@@ -108,6 +108,22 @@ public class TheInternet {
     	
 	 //Assert
   }
+  
+  @Test
+  public void addRemove() throws InterruptedException {
+	  //Arrange
+	 System.setProperty("webdriver.chrome.driver", "C:\\Users\\c.samanja09\\Downloads\\chromedriver_win32\\chromedriver.exe");
+	 WebDriver driver = new ChromeDriver();
+	 String url ="http://the-internet.herokuapp.com";
+	 
+	 //Act
+	 Addremove ar= new Addremove(driver,url);
+			 
+     ar.navigate()
+     .btnClick();
+    	
+	 //Assert
+  }
   @BeforeTest
   public void beforeTest() {
 	  

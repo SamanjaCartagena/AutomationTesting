@@ -5,9 +5,9 @@
     <classes>
       <class name="TheInternet">
         <methods>
+          <include name="addRemove"/>
           <include name="beforeTest"/>
           <include name="afterTest"/>
-          <include name="basicAuth"/>
         </methods>
       </class> <!-- TheInternet -->
     </classes>
