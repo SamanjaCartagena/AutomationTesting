@@ -1,6 +1,7 @@
 import static org.testng.Assert.ARRAY_MISMATCH_TEMPLATE;
 
 import org.openqa.selenium.Alert;
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebDriver.Window;
 import org.openqa.selenium.WebElement;
@@ -23,7 +24,11 @@ public class BasicAuth extends PageObjectBase {
 		}
      
 	public void enterData(String name, String pass) {
-		Alert confirmAlert = driver.switchTo().alert();
+		Alert a= driver.switchTo().alert();
+	  a.sendKeys(name);
+	  a.sendKeys(pass);
+	  a.accept();
+		
 		
 	}
 	
