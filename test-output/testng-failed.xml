@@ -7,7 +7,7 @@
         <methods>
           <include name="beforeTest"/>
           <include name="afterTest"/>
-          <include name="challening"/>
+          <include name="onClick"/>
         </methods>
       </class> <!-- TheInternet -->
     </classes>
