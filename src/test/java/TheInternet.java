@@ -298,6 +298,18 @@ public class TheInternet {
    h.navigate()
    .hovered();
   }
+  @Test
+  public void jsalert() throws InterruptedException {
+	  //Arrange
+	 System.setProperty("webdriver.chrome.driver", "C:\\Users\\c.samanja09\\Downloads\\chromedriver_win32\\chromedriver.exe");
+	 WebDriver driver = new ChromeDriver();
+	 String url ="http://the-internet.herokuapp.com";
+	 
+	 //Act
+	 JavaScriptAlert js= new JavaScriptAlert(driver,url);
+   js.navigate()
+   .jsAlerts();
+  }
   
 	
   
