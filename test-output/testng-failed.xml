@@ -5,9 +5,9 @@
     <classes>
       <class name="TheInternet">
         <methods>
+          <include name="jsalert"/>
           <include name="beforeTest"/>
           <include name="afterTest"/>
-          <include name="hove"/>
         </methods>
       </class> <!-- TheInternet -->
     </classes>
