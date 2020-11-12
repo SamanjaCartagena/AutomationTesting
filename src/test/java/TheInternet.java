@@ -1,7 +1,15 @@
 import org.testng.annotations.Test;
 import org.testng.annotations.BeforeTest;
+
+import java.io.File;
+import java.util.HashMap;
+import java.util.Map;
+import java.util.UUID;
+
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
+import org.openqa.selenium.remote.DesiredCapabilities;
 import org.openqa.selenium.support.PageFactory;
 import org.testng.Assert;
 import org.testng.annotations.AfterTest;
@@ -213,6 +221,86 @@ public class TheInternet {
      .btnClick();
 	 //Assert
   }
+  @Test
+  public void modaldialogue() throws InterruptedException {
+	  //Arrange
+	 System.setProperty("webdriver.chrome.driver", "C:\\Users\\c.samanja09\\Downloads\\chromedriver_win32\\chromedriver.exe");
+	 WebDriver driver = new ChromeDriver();
+	 String url ="http://the-internet.herokuapp.com";
+	 
+	 //Act
+    Entry_ad e = new Entry_ad(driver,url);
+     e.navigate()
+     .modal1();
+	 //Assert
+  }
+  @Test
+  public void file() throws InterruptedException {
+	  //Arrange
+	 System.setProperty("webdriver.chrome.driver", "C:\\Users\\c.samanja09\\Downloads\\chromedriver_win32\\chromedriver.exe");
+	 WebDriver driver = new ChromeDriver();
+	 String url ="http://the-internet.herokuapp.com";
+	 
+	 //Act
+    Entry_ad e = new Entry_ad(driver,url);
+     e.navigate()
+     .modal1();
+	 //Assert
+  }
+  
+  @Test
+  public void fileUp() throws InterruptedException {
+	  //Arrange
+	 System.setProperty("webdriver.chrome.driver", "C:\\Users\\c.samanja09\\Downloads\\chromedriver_win32\\chromedriver.exe");
+	 WebDriver driver = new ChromeDriver();
+	 String url ="http://the-internet.herokuapp.com";
+	 
+	 //Act
+     File_Upload f = new File_Upload(driver,url);
+     f.navigate()
+     .findFile();
+  }
+  
+  @Test
+  public void checkFrame() throws InterruptedException {
+	  //Arrange
+	 System.setProperty("webdriver.chrome.driver", "C:\\Users\\c.samanja09\\Downloads\\chromedriver_win32\\chromedriver.exe");
+	 WebDriver driver = new ChromeDriver();
+	 String url ="http://the-internet.herokuapp.com";
+	 
+	 //Act
+     Frames f = new Frames(driver,url);
+     f.navigate()
+     .checkFrame();
+  }
+  @Test
+  public void slid() throws InterruptedException {
+	  //Arrange
+	 System.setProperty("webdriver.chrome.driver", "C:\\Users\\c.samanja09\\Downloads\\chromedriver_win32\\chromedriver.exe");
+	 WebDriver driver = new ChromeDriver();
+	 String url ="http://the-internet.herokuapp.com";
+	 
+	 //Act
+   HorizontalSlider hs= new HorizontalSlider(driver,url);
+   hs.navigate()
+   .slide();
+  }
+  
+  @Test
+  public void hove() throws InterruptedException {
+	  //Arrange
+	 System.setProperty("webdriver.chrome.driver", "C:\\Users\\c.samanja09\\Downloads\\chromedriver_win32\\chromedriver.exe");
+	 WebDriver driver = new ChromeDriver();
+	 String url ="http://the-internet.herokuapp.com";
+	 
+	 //Act
+   Hovers h= new Hovers(driver,url);
+   h.navigate()
+   .hovered();
+  }
+  
+	
+  
   @BeforeTest
   public void beforeTest() {
 	  
@@ -220,6 +308,7 @@ public class TheInternet {
 
   @AfterTest
   public void afterTest() {
+	  
   }
 
 }

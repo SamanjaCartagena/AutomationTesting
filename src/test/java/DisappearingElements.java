@@ -21,10 +21,13 @@ public class DisappearingElements extends PageObjectBase {
 		driver.findElement(By.xpath("//a[text()='Home']")).click();
 		Thread.sleep(400);
 		driver.navigate().back();
+		driver.navigate().refresh();
 		Thread.sleep(400);
 		driver.findElement(By.xpath("//a[text()='About']")).click();
 		Thread.sleep(400);
 		driver.navigate().back();
+		driver.navigate().refresh();
+
 		Thread.sleep(400);
 		driver.findElement(By.xpath("//a[text()='Contact Us']")).click();
 		Thread.sleep(400);
@@ -33,11 +36,17 @@ public class DisappearingElements extends PageObjectBase {
 		driver.findElement(By.xpath("//a[text()='Portfolio']")).click();
 		Thread.sleep(400);
 		driver.navigate().back();
-		driver.findElement(By.xpath("//a[text()='Gallery']")).click();
-		Thread.sleep(400);
-		driver.navigate().back();
+		
+    	WebElement gallery =driver.findElement(By.xpath("//a[text()='Gallery']"));
+    	
+    		driver.navigate().refresh();
+    	
+    		Thread.sleep(400);
+    		driver.navigate().back();
+        }
+		
 
-	}
+	
 	
 		
 }

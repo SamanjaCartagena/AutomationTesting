@@ -7,7 +7,7 @@
         <methods>
           <include name="beforeTest"/>
           <include name="afterTest"/>
-          <include name="onClick"/>
+          <include name="hove"/>
         </methods>
       </class> <!-- TheInternet -->
     </classes>
