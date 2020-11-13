@@ -20,10 +20,14 @@ public class MultipleWindows extends PageObjectBase{
 	public void mWindows() {
 		WebElement clickLink = driver.findElement(By.xpath("//a[text()='Click Here']"));
 		clickLink.click();
-	//	if(driver.getCurrentUrl().equals("http://the-internet.herokuapp.com/windows/new")) {
-		//	System.out.println("Pass");
-	//	}
-		
+	    driver.navigate().to("http://the-internet.herokuapp.com/windows/new");
+	    if(driver.getCurrentUrl().equals("http://the-internet.herokuapp.com/windows/new")) {
+	    	System.out.println("Test Just Passed");
+	    	System.out.println("This is the new window with title "+driver.getTitle());
+	    }
+	    else {
+	    	System.out.println("Fails");
+	    }
 		
 	}
 }

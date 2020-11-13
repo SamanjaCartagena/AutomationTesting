@@ -321,9 +321,7 @@ public class TheInternet {
 	MultipleWindows mw= new MultipleWindows(driver,url);
 	mw.navigate()
 	.mWindows();
-	if(driver.getCurrentUrl().equals("http://the-internet.herokuapp.com/windows/new")) {
-		System.out.println("Pass");
-	}
+	
   }
   
 	
