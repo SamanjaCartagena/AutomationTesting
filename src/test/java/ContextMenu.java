@@ -6,6 +6,8 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.FindBy;
 
+import framework.PageObjectBase;
+
 public class ContextMenu extends PageObjectBase{
 
 	protected ContextMenu(WebDriver driver, String baseUrl) {

@@ -310,6 +310,21 @@ public class TheInternet {
    js.navigate()
    .jsAlerts();
   }
+  @Test
+  public void open() throws InterruptedException {
+	  //Arrange
+	 System.setProperty("webdriver.chrome.driver", "C:\\Users\\c.samanja09\\Downloads\\chromedriver_win32\\chromedriver.exe");
+	 WebDriver driver = new ChromeDriver();
+	 String url ="http://the-internet.herokuapp.com";
+	 
+	 //Act
+	MultipleWindows mw= new MultipleWindows(driver,url);
+	mw.navigate()
+	.mWindows();
+	if(driver.getCurrentUrl().equals("http://the-internet.herokuapp.com/windows/new")) {
+		System.out.println("Pass");
+	}
+  }
   
 	
   

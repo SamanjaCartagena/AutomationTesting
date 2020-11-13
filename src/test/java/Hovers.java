@@ -7,6 +7,8 @@ import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.How;
 
+import framework.PageObjectBase;
+
 public class Hovers extends PageObjectBase {
 	protected Hovers(WebDriver driver, String baseUrl) {
 		super(driver, baseUrl);

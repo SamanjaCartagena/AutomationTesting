@@ -9,6 +9,8 @@ import org.openqa.selenium.devtools.page.model.Frame;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.How;
 
+import framework.PageObjectBase;
+
 public class BasicAuth extends PageObjectBase {
     
 	

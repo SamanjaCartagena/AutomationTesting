@@ -2,6 +2,8 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 
+import framework.PageObjectBase;
+
 public class File_Upload extends PageObjectBase{
 	protected File_Upload(WebDriver driver, String baseUrl) {
 		super(driver, baseUrl);

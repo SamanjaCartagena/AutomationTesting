@@ -6,6 +6,8 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.How;
 
+import framework.PageObjectBase;
+
 public class Addremove extends PageObjectBase {
 
 	protected Addremove(WebDriver driver, String baseUrl) {

@@ -3,6 +3,8 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 
+import framework.PageObjectBase;
+
 public class Dynamic_loading extends PageObjectBase{
 
 	protected Dynamic_loading(WebDriver driver, String baseUrl) {

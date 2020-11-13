@@ -5,6 +5,8 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 
+import framework.PageObjectBase;
+
 public class JavaScriptAlert extends PageObjectBase{
 	protected JavaScriptAlert(WebDriver driver, String baseUrl) {
 		super(driver, baseUrl);

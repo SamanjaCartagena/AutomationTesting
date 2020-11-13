@@ -1,6 +1,8 @@
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 
+import framework.PageObjectBase;
+
 public class FileDownload extends PageObjectBase{
 	protected FileDownload(WebDriver driver, String baseUrl) {
 		super(driver, baseUrl);

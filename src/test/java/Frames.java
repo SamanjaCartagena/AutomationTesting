@@ -5,6 +5,8 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.How;
 
+import framework.PageObjectBase;
+
 public class Frames extends PageObjectBase {
 	protected Frames(WebDriver driver, String baseUrl) {
 		super(driver, baseUrl);
