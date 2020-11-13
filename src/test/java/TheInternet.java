@@ -323,6 +323,32 @@ public class TheInternet {
 	.mWindows();
 	
   }
+  @Test
+  public void presses() throws InterruptedException {
+	  //Arrange
+	 System.setProperty("webdriver.chrome.driver", "C:\\Users\\c.samanja09\\Downloads\\chromedriver_win32\\chromedriver.exe");
+	 WebDriver driver = new ChromeDriver();
+	 String url ="http://the-internet.herokuapp.com";
+	 
+	 //Act
+	KeyPresses k= new KeyPresses(driver,url);
+	k.navigate()
+    .press();
+	
+  }
+  @Test
+  public void redirectLink() throws InterruptedException {
+	  //Arrange
+	 System.setProperty("webdriver.chrome.driver", "C:\\Users\\c.samanja09\\Downloads\\chromedriver_win32\\chromedriver.exe");
+	 WebDriver driver = new ChromeDriver();
+	 String url ="http://the-internet.herokuapp.com";
+	 
+	 //Act
+	Redirector r= new Redirector(driver,url);
+	r.navigate()
+    .linking();
+	
+  }
   
 	
   
