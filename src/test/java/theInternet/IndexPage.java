@@ -1,3 +1,4 @@
+package theInternet;
 import org.openqa.selenium.WebDriver;
 
 import framework.PageObjectBase;

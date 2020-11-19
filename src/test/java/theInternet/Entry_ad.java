@@ -1,3 +1,4 @@
+package theInternet;
 import java.awt.image.AreaAveragingScaleFilter;
 
 import org.openqa.selenium.By;

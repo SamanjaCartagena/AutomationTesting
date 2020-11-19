@@ -1,3 +1,4 @@
+package theInternet;
 import static org.testng.Assert.ARRAY_MISMATCH_TEMPLATE;
 
 import org.openqa.selenium.Alert;

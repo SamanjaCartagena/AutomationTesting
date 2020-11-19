@@ -1,3 +1,4 @@
+package theInternet;
 import org.testng.annotations.Test;
 import org.testng.annotations.BeforeTest;
 
@@ -13,8 +14,9 @@ import org.openqa.selenium.remote.DesiredCapabilities;
 import org.openqa.selenium.support.PageFactory;
 import org.testng.Assert;
 import org.testng.annotations.AfterTest;
-
-public class TheInternet {
+import framework.TestBase;
+import foundation.TheInternetTestBase;
+public class TheInternet extends TheInternetTestBase {
   @Test
   public void f() {
 	  //Arrange
@@ -81,8 +83,8 @@ public class TheInternet {
 	 
 	 		
 	 //Act
-      FormAuthentication form= new FormAuthentication(driver,url);    	
-    	form.navigate()
+        new FormAuthentication(driver,url)
+    	.navigate()
     	.login("samanja", "1234");
     	
 	 //Assert
@@ -354,12 +356,13 @@ public class TheInternet {
   
   @BeforeTest
   public void beforeTest() {
+	  super.beforeTest();
 	  
   }
 
   @AfterTest
   public void afterTest() {
-	  
-  }
+	  super.afterTest();
+}
 
 }
