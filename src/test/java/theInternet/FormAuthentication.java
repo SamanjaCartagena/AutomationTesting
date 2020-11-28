@@ -1,8 +1,12 @@
 package theInternet;
+import java.util.concurrent.TimeUnit;
+
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.How;
+import org.testng.Assert;
 
 import framework.PageObjectBase;
 
@@ -31,6 +35,12 @@ public class FormAuthentication extends PageObjectBase {
 		username.sendKeys(uid);
 		password.sendKeys(pass);
 		submitBtn.submit();
+		driver.manage().timeouts().implicitlyWait(3, TimeUnit.SECONDS);
+		username.sendKeys("tomsmith");
+		password.sendKeys("SuperSecretPassword!");
+		submitBtn.submit();
+		String cUrl= driver.getCurrentUrl();
+		
 		
 	}
 	

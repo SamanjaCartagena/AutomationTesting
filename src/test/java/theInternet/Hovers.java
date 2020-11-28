@@ -1,6 +1,8 @@
 package theInternet;
 
 
+import java.util.List;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -22,9 +24,19 @@ public class Hovers extends PageObjectBase {
 			return this;
 		}
 	public void hovered() throws InterruptedException {
+		List<WebElement> figure = driver.findElements(By.className("figure"));
+		System.out.println(figure.size());
+		
+		for(int i=0; i<figure.size(); i++) {
+			Thread.sleep(3000);
+			figure.get(i).click();
+		}
+
+	/**	WebElement images= driver.findElement(By.class("figure"))
 		Actions action = new Actions(driver);
 		
 		action.moveToElement(element).build().perform();
+		**/
 	}
 	
 }

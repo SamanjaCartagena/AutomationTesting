@@ -9,6 +9,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.devtools.page.model.Frame;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.How;
+import org.testng.annotations.Test;
 
 import framework.PageObjectBase;
 
@@ -25,11 +26,11 @@ public class BasicAuth extends PageObjectBase {
                   
 			return this;
 		}
-     
-	public void enterData(String name, String pass) {
+	
+    	public void enterData(String name, String pass) {
 		Alert a= driver.switchTo().alert();
-	  a.sendKeys(name);
-	  a.sendKeys(pass);
+	  a.sendKeys("user");
+	  a.sendKeys("admin");
 	  a.accept();
 		
 		

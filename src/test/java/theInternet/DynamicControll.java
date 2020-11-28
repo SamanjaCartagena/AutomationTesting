@@ -1,4 +1,7 @@
 package theInternet;
+import java.util.List;
+import java.util.concurrent.TimeUnit;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -20,18 +23,23 @@ public class DynamicControll extends PageObjectBase{
 		}
 	
 	public void btnClick() throws InterruptedException {
-		driver.findElement(By.xpath("//button[text()='Remove']")).click();
-		Thread.sleep(400);
-	
-
-
-
-	}
-	public void btnClick2() throws InterruptedException{
-		driver.findElement(By.xpath("//button[text()='Add']")).click();
-
-	}
 		
+	int j=0;
+	while(j!=2) {
+		List<WebElement> li = driver.findElements(By.tagName("button"));
+
+	for(int i=0; i<li.size(); i++) {
+		
+		li.get(i).click();
+	
+	}
+//	driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
+	j++;
+	
+	}
+
+	}
+	
 
 
 }

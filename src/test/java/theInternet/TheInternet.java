@@ -73,7 +73,7 @@ public class TheInternet extends TheInternetTestBase {
 
 		Assert.assertEquals(actualNumber, expectedNumber);
 	}
-  
+  //Works properly
   @Test
   public void formAuthenticate() {
 	  //Arrange
@@ -86,8 +86,8 @@ public class TheInternet extends TheInternetTestBase {
         new FormAuthentication(driver,url)
     	.navigate()
     	.login("samanja", "1234");
-    	
-	 //Assert
+
+    
   }
   @Test
   public void basicAuth() {
@@ -99,7 +99,7 @@ public class TheInternet extends TheInternetTestBase {
 	 //Act
       BasicAuth a = new BasicAuth(driver,url);
           a.navigate()
-          .enterData("admin", "admin");
+          .enterData("user", "admin");
           
     	
 	 //Assert
@@ -135,8 +135,9 @@ public class TheInternet extends TheInternetTestBase {
     	
 	 //Assert
   }
+  //Works properly number 3
   @Test
-  public void challening() throws InterruptedException {
+  public void challenging() throws InterruptedException {
 	  //Arrange
 	 System.setProperty("webdriver.chrome.driver", "C:\\Users\\c.samanja09\\Downloads\\chromedriver_win32\\chromedriver.exe");
 	 WebDriver driver = new ChromeDriver();
@@ -147,9 +148,11 @@ public class TheInternet extends TheInternetTestBase {
 			 
      c.navigate()
     .challenge();
-    	
-	 //Assert
+     
+   
   }
+  //number 5
+  //Works properly
   @Test
   public void context() throws InterruptedException {
 	  //Arrange
@@ -165,6 +168,7 @@ public class TheInternet extends TheInternetTestBase {
     	
 	 //Assert
   }
+  //Works properly number 6
   @Test
   public void disappear() throws InterruptedException {
 	  //Arrange
@@ -180,6 +184,8 @@ public class TheInternet extends TheInternetTestBase {
     	
 	 //Assert
   }
+  
+  //Works properly number 7
   @Test
   public void drag() throws InterruptedException {
 	  //Arrange
@@ -195,6 +201,8 @@ public class TheInternet extends TheInternetTestBase {
     	
 	 //Assert
   }
+  
+  //Works Number 9
   @Test
   public void onClick() throws InterruptedException {
 	  //Arrange
@@ -209,6 +217,7 @@ public class TheInternet extends TheInternetTestBase {
      .btnClick();
 	 //Assert
   }
+  //Works properly Number 10
   @Test
   public void dynamic() throws InterruptedException {
 	  //Arrange
@@ -223,6 +232,7 @@ public class TheInternet extends TheInternetTestBase {
      .btnClick();
 	 //Assert
   }
+  //Does not work It worked before !! Number 11 :(
   @Test
   public void modaldialogue() throws InterruptedException {
 	  //Arrange
@@ -236,20 +246,8 @@ public class TheInternet extends TheInternetTestBase {
      .modal1();
 	 //Assert
   }
-  @Test
-  public void file() throws InterruptedException {
-	  //Arrange
-	 System.setProperty("webdriver.chrome.driver", "C:\\Users\\c.samanja09\\Downloads\\chromedriver_win32\\chromedriver.exe");
-	 WebDriver driver = new ChromeDriver();
-	 String url ="http://the-internet.herokuapp.com";
-	 
-	 //Act
-    Entry_ad e = new Entry_ad(driver,url);
-     e.navigate()
-     .modal1();
-	 //Assert
-  }
-  
+
+  //Works properly Number 14
   @Test
   public void fileUp() throws InterruptedException {
 	  //Arrange
@@ -261,8 +259,10 @@ public class TheInternet extends TheInternetTestBase {
      File_Upload f = new File_Upload(driver,url);
      f.navigate()
      .findFile();
+     String cURL = driver.getCurrentUrl();
+     Assert.assertEquals(cURL, "http://the-internet.herokuapp.com/upload");
   }
-  
+  //Number 17 Works properly
   @Test
   public void checkFrame() throws InterruptedException {
 	  //Arrange
@@ -275,6 +275,8 @@ public class TheInternet extends TheInternetTestBase {
      f.navigate()
      .checkFrame();
   }
+  //Works properly but I cannot make it slide to the max
+  //Number 18
   @Test
   public void slid() throws InterruptedException {
 	  //Arrange
@@ -286,8 +288,9 @@ public class TheInternet extends TheInternetTestBase {
    HorizontalSlider hs= new HorizontalSlider(driver,url);
    hs.navigate()
    .slide();
-  }
   
+  }
+  //Works properly
   @Test
   public void hove() throws InterruptedException {
 	  //Arrange
@@ -300,6 +303,8 @@ public class TheInternet extends TheInternetTestBase {
    h.navigate()
    .hovered();
   }
+  
+  //Works properly
   @Test
   public void jsalert() throws InterruptedException {
 	  //Arrange
@@ -312,6 +317,7 @@ public class TheInternet extends TheInternetTestBase {
    js.navigate()
    .jsAlerts();
   }
+  //Works properly
   @Test
   public void open() throws InterruptedException {
 	  //Arrange
@@ -325,6 +331,7 @@ public class TheInternet extends TheInternetTestBase {
 	.mWindows();
 	
   }
+  //Works properly
   @Test
   public void presses() throws InterruptedException {
 	  //Arrange
@@ -338,6 +345,7 @@ public class TheInternet extends TheInternetTestBase {
     .press();
 	
   }
+  //Works properly
   @Test
   public void redirectLink() throws InterruptedException {
 	  //Arrange

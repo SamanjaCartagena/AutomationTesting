@@ -28,8 +28,14 @@ public class HorizontalSlider extends PageObjectBase{
 		WebElement max= driver.findElement(By.xpath("//input[@max='5.0']"));
 	WebElement slider=driver.findElement(By.xpath("//input[@type='range']"));
 	Actions a = new Actions(driver);
-	Action action= a.dragAndDrop(min,max).build();
+	//Action action= a.dragAndDrop(min,max).build();
+	Action action = a.dragAndDropBy(slider, 0, 10).build();
+
 	action.perform();
+	
+	Action action2 = a.dragAndDropBy(slider, 10, 0).build();
+
+	action2.perform();
 	
 	}
 }

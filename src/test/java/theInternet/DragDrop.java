@@ -29,7 +29,7 @@ public class DragDrop extends PageObjectBase{
 		Actions builder = new Actions(driver);
 		builder.dragAndDrop(box1, box2).build().perform();
 		Thread.sleep(400);
-      //  builder.dragAndDrop(box2, box1).build().perform();
+        builder.dragAndDrop(box2, box1).build().perform();
 	}
 	
 		

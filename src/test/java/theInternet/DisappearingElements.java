@@ -1,5 +1,8 @@
 package theInternet;
 
+import java.util.ArrayList;
+import java.util.List;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -21,7 +24,8 @@ public class DisappearingElements extends PageObjectBase {
 		}
 	
 	public void btnClick() throws InterruptedException {
-		driver.findElement(By.xpath("//a[text()='Home']")).click();
+		WebElement gallery;
+	/*	driver.findElement(By.xpath("//a[text()='Home']")).click();
 		Thread.sleep(400);
 		driver.navigate().back();
 		driver.navigate().refresh();
@@ -39,17 +43,21 @@ public class DisappearingElements extends PageObjectBase {
 		driver.findElement(By.xpath("//a[text()='Portfolio']")).click();
 		Thread.sleep(400);
 		driver.navigate().back();
-		
-    	WebElement gallery =driver.findElement(By.xpath("//a[text()='Gallery']"));
-    	
-    		driver.navigate().refresh();
-    	
-    		Thread.sleep(400);
-    		driver.navigate().back();
-        }
-		
-
-	
-	
-		
+		**/
+		List<WebElement> li = driver.findElements(By.tagName("li"));
+        
+		if(li.size()<5) {
+			driver.navigate().refresh();
+		}
+		else {
+         gallery =driver.findElement(By.xpath("//a[text()='Gallery']"));
+    	 
+    	 
+    		gallery.click();
+    //	  }
+		}	
+    	  
+    	 
+        
+	}		
 }

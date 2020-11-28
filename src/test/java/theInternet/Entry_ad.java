@@ -33,29 +33,13 @@ public class Entry_ad extends PageObjectBase {
 
 	public void modal1() throws InterruptedException {
 		
-     if(modalId.isDisplayed()== true) {
-    		 System.out.println("This is a modal window");
-    		 String title=""+modalClass.getText();
-    		 System.out.println(title);
-    		 Thread.sleep(1000);
-    		 modalFooter.click();
-    		Thread.sleep(2000);
-    		restartBtn.click();
-    		Thread.sleep(1000);
-    		modalFooter.click();
-    		
-     }
-    
-     
+    WebElement modalDialogue = driver.findElement(By.className("modal"));
    
- 
+    Actions action = new Actions(driver);
+    action.moveToElement(modalDialogue).perform();
+    modalFooter.click();		
+	}
     
      
- System.out.println("===========================");
-     
-}
-	public void modal2() {
-		restartBtn.click();
-	}
-
+  
 }
