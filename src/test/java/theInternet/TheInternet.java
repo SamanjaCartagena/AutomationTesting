@@ -359,7 +359,52 @@ public class TheInternet extends TheInternetTestBase {
     .linking();
 	
   }
+  //Works properly
+  @Test
+  public void fileDown() throws InterruptedException {
+	  //Arrange
+	 System.setProperty("webdriver.chrome.driver", "C:\\Users\\c.samanja09\\Downloads\\chromedriver_win32\\chromedriver.exe");
+	 WebDriver driver = new ChromeDriver();
+	 String url ="http://the-internet.herokuapp.com";
+	 
+	 //Act
+	FileDownload r= new FileDownload(driver,url);
+	r.navigate()
+    .fileDown();
+	
+  }
+//Works properly
+  @Test
+  public void forgot() throws InterruptedException {
+	  //Arrange
+	 System.setProperty("webdriver.chrome.driver", "C:\\Users\\c.samanja09\\Downloads\\chromedriver_win32\\chromedriver.exe");
+	 WebDriver driver = new ChromeDriver();
+	 String url ="http://the-internet.herokuapp.com";
+	 
+	 //Act
+	ForgotPassword r= new ForgotPassword(driver,url);
+	r.navigate()
+    .enterEmail("c.samanja09@gmail.com");
+	
+  }
   
+  //Works partially
+  @Test
+  public void demoqaSite() throws InterruptedException {
+	  System.setProperty("webdriver.chrome.driver", "C:\\Users\\c.samanja09\\Downloads\\chromedriver_win32\\chromedriver.exe");
+		 WebDriver driver = new ChromeDriver();
+		 String url ="https://demoqa.com";
+		 
+		 //Act
+	   Demoqa d = new Demoqa(driver,url);
+	   d.navigate()
+	   .formFilling();
+		
+	  }
+	  
+	  
+  
+
 	
   
   @BeforeTest
