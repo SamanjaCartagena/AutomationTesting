@@ -2,21 +2,13 @@ package theInternet;
 import org.testng.annotations.Test;
 import org.testng.annotations.BeforeTest;
 
-import java.io.File;
-import java.util.HashMap;
-import java.util.Map;
-import java.util.UUID;
-
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
-import org.openqa.selenium.chrome.ChromeOptions;
-import org.openqa.selenium.remote.DesiredCapabilities;
-import org.openqa.selenium.support.PageFactory;
 import org.testng.Assert;
 import org.testng.annotations.AfterTest;
-import framework.TestBase;
 import foundation.TheInternetTestBase;
 public class TheInternet extends TheInternetTestBase {
+	
   @Test
   public void f() {
 	  //Arrange

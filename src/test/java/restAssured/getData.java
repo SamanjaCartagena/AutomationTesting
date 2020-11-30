@@ -6,18 +6,14 @@ import static org.hamcrest.Matchers.equalTo;
 
 import java.util.List;
 
-import org.json.simple.JSONObject;
-
-import static io.restassured.matcher.RestAssuredMatchers.*;
-import static org.hamcrest.Matchers.*;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
 import io.restassured.RestAssured;
 import io.restassured.path.json.JsonPath;
 import io.restassured.response.Response;
-import io.restassured.response.ResponseBody;
 import io.restassured.specification.RequestSpecification;
+
 public class getData {
 	//Works properly
 	@Test
@@ -57,24 +53,24 @@ public class getData {
 		RestAssured.baseURI ="https://reqres.in/api";
 		RequestSpecification request = RestAssured.given();
 
-		JSONObject requestParams = new JSONObject();
-		request.header("Content-Type","application/json");
-		requestParams.put("id", 1); 
-		requestParams.put("name", "cerulean");
-		requestParams.put("year", 2000);
-		requestParams.put("color", "#98B2D1");
-		requestParams.put("pantone_value", "15-4020");
-		requestParams.put("email", "eve.holt@reqres.in");
-		requestParams.put("password", "cityslicka");
-		 request.body(requestParams.toJSONString());
-		 Response response = request.post("https://reqres.in/api/login");
+		/*
+		 * JsonObject requestParams = new JSObject();
+		 * request.header("Content-Type","application/json"); requestParams.put("id",
+		 * 1); requestParams.put("name", "cerulean"); requestParams.put("year", 2000);
+		 * requestParams.put("color", "#98B2D1"); requestParams.put("pantone_value",
+		 * "15-4020"); requestParams.put("email", "eve.holt@reqres.in");
+		 * requestParams.put("password", "cityslicka");
+		 * request.body(requestParams.toJSONString()); Response response =
+		 * request.post("https://reqres.in/api/login");
+		 */
 
-			String successCode = response.jsonPath().get("token");
-            Assert.assertEquals(successCode,"QpwL5tke4Pnpja7X4");
-		 int statusCode = response.getStatusCode();
-		 System.out.println("The status code recieved: " + statusCode);
-		 System.out.println("The token is "+successCode);
-		 System.out.println("Response body: " + response.body().asString());
+		/*
+		 * String successCode = response.jsonPath().get("token");
+		 * Assert.assertEquals(successCode,"QpwL5tke4Pnpja7X4"); int statusCode =
+		 * response.getStatusCode(); System.out.println("The status code recieved: " +
+		 * statusCode); System.out.println("The token is "+successCode);
+		 * System.out.println("Response body: " + response.body().asString());
+		 */
 		}
 	//Works properly
 	//Number 3
@@ -106,19 +102,19 @@ public class getData {
 		 RequestSpecification request = RestAssured.given();
 		 // Add a header stating the Request body is a JSON
 		 request.header("Content-Type", "application/json"); 
-		 JSONObject requestParams = new JSONObject();
-		 requestParams.put("name", "Morpheus2"); // Cast
-		 requestParams.put("job", "zion resident");
-		 
-		 request.body(requestParams.toJSONString());
-		 Response response = request.put("/update/"+emptID);
-		 
-		 int statusCode = response.getStatusCode();
-		
-		 System.out.println(response.asString());
-         System.out.println("The body is "+response.getBody());
-		// System.out.println(response.getTime());
-		 Assert.assertEquals(statusCode, 200); 
+			/*
+			 * JSONObject requestParams = new JSONObject(); requestParams.put("name",
+			 * "Morpheus2"); // Cast requestParams.put("job", "zion resident");
+			 * 
+			 * request.body(requestParams.toJSONString()); Response response =
+			 * request.put("/update/"+emptID);
+			 * 
+			 * int statusCode = response.getStatusCode();
+			 * 
+			 * System.out.println(response.asString());
+			 * System.out.println("The body is "+response.getBody()); //
+			 * System.out.println(response.getTime()); Assert.assertEquals(statusCode, 200);
+			 */
 	
 		 
 	}
@@ -133,19 +129,19 @@ void updateUsingPatch() {
 		 RequestSpecification request = RestAssured.given();
 		 // Add a header stating the Request body is a JSON
 		 request.header("Content-Type", "application/json"); 
-		 JSONObject requestParams = new JSONObject();
-		 requestParams.put("name", "Morpheus2"); // Cast
-		 requestParams.put("job", "zion resident");
-		 
-		 request.body(requestParams.toJSONString());
-		 Response response = request.patch("/update/"+emptID);
-		 
-		 int statusCode = response.getStatusCode();
-		
-		 System.out.println(response.asString());
-         System.out.println("The body is "+response.getBody());
-		// System.out.println(response.getTime());
-		 Assert.assertEquals(statusCode, 200); 
+			/*
+			 * JSONObject requestParams = new JSONObject(); requestParams.put("name",
+			 * "Morpheus2"); // Cast requestParams.put("job", "zion resident");
+			 * 
+			 * request.body(requestParams.toJSONString()); Response response =
+			 * request.patch("/update/"+emptID);
+			 * 
+			 * int statusCode = response.getStatusCode();
+			 * 
+			 * System.out.println(response.asString());
+			 * System.out.println("The body is "+response.getBody()); //
+			 * System.out.println(response.getTime()); Assert.assertEquals(statusCode, 200);
+			 */
 	
 		 
 	}
@@ -157,27 +153,31 @@ void updateUsingPatch() {
 		 RequestSpecification request = RestAssured.given();
 		 // Add a header stating the Request body is a JSON
 		 request.header("Content-Type", "application/json"); 
-		 JSONObject requestParams = new JSONObject();
-		 requestParams.put("id", 2); // Cast
-		 requestParams.put("email", "janet.weaver@reqres.in");
-		 requestParams.put("first_name","Janet");
-		 requestParams.put("last_name","Weaver"); 
-		 requestParams.put( "avatar","https://s3.amazonaws.com/uifaces/faces/twitter/josephstein/128.jpg");
+			/*
+			 * JSONObject requestParams = new JSONObject(); requestParams.put("id", 2); //
+			 * Cast requestParams.put("email", "janet.weaver@reqres.in");
+			 * requestParams.put("first_name","Janet");
+			 * requestParams.put("last_name","Weaver"); requestParams.put(
+			 * "avatar","https://s3.amazonaws.com/uifaces/faces/twitter/josephstein/128.jpg"
+			 * );
+			 */
 		 
-		 request.body(requestParams.toJSONString());
-		 Response response = request.post("/singleUser/");
-		 
-		 ResponseBody body = response.getBody();
-		 
-		 // Deserialize the Response body into SingleUser
-		 SingleUser responseBody = body.as(SingleUser.class);
-		 
-		 // Use the RegistrationSuccessResponse class instance to Assert the values of 
-		 // Response.
-		 Assert.assertEquals("janet.weaver@reqres.in", responseBody.email);
-		 
-		 
-		 Assert.assertEquals(2, responseBody.id);
+			/*
+			 * request.body(requestParams.toJSONString()); Response response =
+			 * request.post("/singleUser/");
+			 * 
+			 * ResponseBody body = response.getBody();
+			 * 
+			 * // Deserialize the Response body into SingleUser SingleUser responseBody =
+			 * body.as(SingleUser.class);
+			 * 
+			 * // Use the RegistrationSuccessResponse class instance to Assert the values of
+			 * // Response. Assert.assertEquals("janet.weaver@reqres.in",
+			 * responseBody.email);
+			 * 
+			 * 
+			 * Assert.assertEquals(2, responseBody.id);
+			 */
 		 
 	}
 	@Test
